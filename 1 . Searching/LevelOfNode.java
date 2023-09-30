@@ -74,3 +74,35 @@ class GFG {
 		return -1;
 	}
 }
+
+/*main method:
+
+In the main method, an example undirected graph is created with 5 vertices (V) and the edges specified in the edges array. The task is to find the level of node X, which is set to 3.
+The program calls the findLevel function to perform this task.
+The level of node X is then printed to the console.
+findLevel method:
+
+The findLevel method takes the following parameters:
+
+N: The number of vertices in the graph.
+edges: A 2D array representing the edges between vertices.
+X: The node for which the level needs to be found.
+The method first calculates the maximum vertex number (maxVertex) by iterating through the edges to determine the highest vertex number.
+
+It then creates an adjacency list adj to represent the graph, where each vertex is associated with its adjacent vertices.
+
+The adjacency list is populated based on the information from the edges.
+
+If X is greater than maxVertex (i.e., it exceeds the maximum vertex number) or if X has no adjacent vertices, it returns -1 because X does not exist in the graph.
+
+The method uses a queue (q) for breadth-first search (BFS) traversal. It starts the traversal from vertex 0 and initializes the level to 0.
+
+A boolean array visited is used to keep track of visited vertices.
+
+The BFS traversal continues until the queue is empty. At each level of the traversal, it checks if the current node is equal to X. If it is, it returns the current level as the result.
+
+Otherwise, it explores the adjacent nodes of the current node and marks them as visited. The traversal continues to the next level, and the level variable is incremented.
+
+Output:
+
+The program outputs the level of node X in the graph or -1 if X is not present in the graph.*/
